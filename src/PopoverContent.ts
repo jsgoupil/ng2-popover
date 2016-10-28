@@ -76,8 +76,8 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
 
     popover: Popover;
     onCloseFromOutside = new EventEmitter();
-    top: number = -1000;
-    left: number = -1000;
+    top: number = -100000;
+    left: number = -100000;
     isIn: boolean = false;
     displayType: string = "none";
 
@@ -141,15 +141,15 @@ export class PopoverContent implements AfterViewInit, OnDestroy {
     }
 
     hide(): void {
-        this.top = -1000;
-        this.left = -1000;
+        this.top = -100000;
+        this.left = -100000;
         this.isIn = true;
         this.popover.hide();
     }
 
     hideFromPopover() {
-        this.top = -1000;
-        this.left = -1000;
+        this.top = -100000;
+        this.left = -100000;
         this.isIn = true;
     }
 
